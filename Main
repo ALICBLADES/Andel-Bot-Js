@@ -1,0 +1,77 @@
+//Setting all the components from electron so they can be used
+const { app, BrowserWindow, ipcMain, webContents, contextBridge,
+ipcRenderer} = require('electron');
+const { truncate } = require('fs');
+
+const electron = require("electron");
+
+const os = require("os-utils");
+
+const Usage = require("./Cpu_Info.js");
+
+const url =require('url');
+
+//Setting up so we can use the file directory in
+const path = require('path');
+const { cpuUsage } = require('process');
+
+// Creating the window set so there can be multiple windows shown
+
+const createWindow = () => { //START CREATEWINDOW
+
+   //Initializing the main window
+    const win = new BrowserWindow({
+      //Setting the height of the window
+      height: 1000,
+
+      //Setting the width of the window
+      width: 1200,
+
+      //Setting the frame of the window to be true
+      frame: true,
+
+      //Setting of the web preferences
+      webPreferences:
+
+      { //START WEBPREFRENCES
+
+      //Setting node integration to false
+      nodeIntegration: false,
+
+      //Setting the context isolation to true
+      contextIsolation: true,
+
+      //Preload the path to the app and to preload the js file for security
+      preload: path.join(__dirname, './preload.js'),
+
+      }, //END WEBPREFRENCES
+
+      Usage
+
+   }); //END CREATEWINDOW
+
+   win.webContents.
+
+   win.webContents.openDevTools();
+
+   //Load the file with the html file
+   win.loadFile("./src/index.html");
+
+} //CreateWindow
+
+
+
+//The app is ready
+app.on("ready", createWindow);
+
+//When the none of the windows are open
+app.on('activate', () =>{ //START APP.ON
+
+   //IF BrowserWindow is shut down
+   if(BrowserWindow.getAllWindows.length === 0) createWindow();
+
+}); //END APP.ON
+
+module.exports= {
+
+}
