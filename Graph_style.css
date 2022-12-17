@@ -1,0 +1,91 @@
+.chart {
+    border-bottom: 4px solid black;
+    border-left: 4px solid black;
+    margin-left:300px;
+    margin-top: 200px;
+    padding: 0;
+    height: 450px;
+    width: 450px;
+    position: relative;
+  }
+
+h3 {
+
+   position: relative;
+   bottom: -160px;
+   right: -475px;
+
+}
+
+#X-axis {
+
+    position: absolute;
+    font-size: larger;
+    bottom: -100px;
+    left: 150px;
+
+ }
+
+ #Y-axis {
+
+    position: absolute;
+    font-size: larger;
+    bottom: 50px;
+    left: -90px;
+
+ }
+
+ .Border_For_Candles{
+
+  background-color: black;
+  margin-top: 3px;
+  margin-bottom: 10px;
+
+ }
+
+ .Green_Candle_Line {
+
+   background-color: rgb(9, 186, 9);
+   position: absolute;
+   font-size: larger;
+   width: 3px;
+   height: 20px;
+   bottom: 100px;
+   left: -46px;
+
+ }
+
+ .Candle_Green {
+
+   background: rgb(0, 186, 9);
+   position: absolute;
+   font-size: larger;
+   width: 100px;
+   height: 100px;
+   bottom: -90px;
+   left: 46px;
+
+ }
+
+ .Red_Candle_Line {
+
+   background: rgb(186, 9, 9);
+   position: absolute;
+   font-size: larger;
+   width: 3px;
+   height: 20px;
+   bottom: -100px;
+   left: 46px;
+
+ }
+
+ .Candle_Red {
+   background: rgb(186, 9, 9);
+   position: absolute;
+   font-size: larger;
+   width: 100px;
+   height: 100px;
+   bottom: -110px;
+   left: 46px;
+
+ }
