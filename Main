@@ -50,8 +50,6 @@ const createWindow = () => { //START CREATEWINDOW
 
    }); //END CREATEWINDOW
 
-   win.webContents.
-
    win.webContents.openDevTools();
 
    //Load the file with the html file
